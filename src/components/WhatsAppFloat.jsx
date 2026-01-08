@@ -2,7 +2,7 @@ import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function WhatsAppFloat() {
-    const CETIP_PHONE_NUMBER = '+527443716383';
+    const CETIP_PHONE_NUMBER = '+527443716384';
     const WHATSAPP_MESSAGE = encodeURIComponent('Hola CETIP, estoy interesado(a) en la carrera de Técnico Programador Analista de Sistemas.');
     const WHATSAPP_LINK = `https://wa.me/${CETIP_PHONE_NUMBER.replace('+', '')}?text=${WHATSAPP_MESSAGE}`;
 

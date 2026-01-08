@@ -30,13 +30,13 @@ export default function Contact() {
                         </p>
 
                         <div className="space-y-6">
-                            <a href="tel:7443716383" className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+                            <a href="tel:+527443716384" className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
                                 <div className="w-12 h-12 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow">
                                     <Phone size={24} />
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-400">Llámanos</p>
-                                    <p className="text-xl font-bold">744 371 6383</p>
+                                    <p className="text-xl font-bold">744 371 6384</p>
                                 </div>
                             </a>
 
