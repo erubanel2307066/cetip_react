@@ -34,7 +34,7 @@ export default function Footer() {
                                 <Mail size={16} className="text-primary-500" /> escueladecomputacion@gmail.com
                             </li>
                             <li className="flex items-center gap-3">
-                                <Phone size={16} className="text-primary-500" /> 744 371 6383
+                                <Phone size={16} className="text-primary-500" /> 744 371 6384
                             </li>
                             <li className="flex items-center gap-3">
                                 <MapPin size={16} className="text-primary-500" /> Cruz Grande, Guerrero MX

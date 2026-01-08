@@ -75,7 +75,7 @@ export default function Hero() {
                         <div className="w-full h-full bg-gradient-to-br from-white/10 to-transparent rounded-full border border-white/10 backdrop-blur-sm flex items-center justify-center p-8 relative overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                             <img
-                                src="/assets/img/logo.jpg"
+                                src="/img/logo.jpg"
                                 alt="CETIP Tech"
                                 className="w-[80%] h-[80%] object-contain drop-shadow-2xl rounded-3xl"
                             />

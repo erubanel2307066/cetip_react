@@ -5,14 +5,14 @@ const team = [
         name: "Profr. Andres Reyes Carrillo",
         role: "Director General",
         desc: "Lidera la visión estratégica con más de 20 años en educación tecnológica.",
-        image: "/assets/img/andres.png",
+        image: "/img/andres.png",
         fallback: "AR"
     },
     {
         name: "Profr. Erubanel Gallo Casiano",
         role: "Líder de Programación",
         desc: "Experto en Algoritmos y Desarrollo. Apasionado por la lógica de sistemas.",
-        image: "/assets/img/Erubanel.png",
+        image: "/img/Erubanel.png",
         fallback: "EG"
     },
     {
