@@ -24,7 +24,7 @@ export default function Hero() {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-accent-yellow text-sm font-medium mb-6">
                         <Sparkles size={16} />
-                        <span>Inscripciones Abiertas 2024</span>
+                        <span>Inscripciones Abiertas 2026</span>
                     </div>
 
                     <h1 className="text-5xl lg:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6">

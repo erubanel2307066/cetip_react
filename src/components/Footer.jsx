@@ -46,13 +46,13 @@ export default function Footer() {
                         <h4 className="text-white font-bold mb-4">Validez</h4>
                         <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
                             <p className="text-xs text-gray-400 mb-2">Incorporado a la SEP</p>
-                            <p className="font-bold text-white">RVOE: 2024-C3T1P</p>
+                            <p className="font-bold text-white">RVOE: 2026-C3T1P</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                    <p>&copy; 2024 CETIP. Todos los derechos reservados.</p>
+                    <p>&copy; 2026 CETIP. Todos los derechos reservados.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition">Aviso de Privacidad</a>
                         <a href="#" className="hover:text-white transition">Términos y Condiciones</a>
