@@ -36,10 +36,8 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Button variant="secondary" className="group">
-                            <a href="#contacto" className="flex items-center gap-2">
-                                Inicia tu Inscripción <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                            </a>
+                        <Button href="#contacto" variant="secondary" className="group">
+                            Inicia tu Inscripción <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </Button>
                         <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-white">
                             <a href="#cursos">Ver Plan de Estudios</a>
