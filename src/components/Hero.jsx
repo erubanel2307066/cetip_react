@@ -10,7 +10,6 @@ export default function Hero() {
                 <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-500 blur-[120px]" />
                 <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600 blur-[120px]" />
             </div>
-
             {/* Grid Pattern */}
             <div className="absolute inset-0 z-0 opacity-10"
                 style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}>
@@ -27,11 +26,11 @@ export default function Hero() {
                         <span>Inscripciones Abiertas 2026</span>
                     </div>
 
-                    <h1 className="text-5xl lg:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6">
+                    <h1 className="text-5xl lg:text-7xl font-display font-extrabold text-white/90 leading-[1.1] mb-6">
                         Domina el <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-yellow to-yellow-200">Futuro Digital</span>
                     </h1>
 
-                    <p className="text-xl text-blue-100 mb-8 max-w-lg font-light leading-relaxed">
+                    <p className="text-xl text-white/90 mb-8 max-w-lg font-light leading-relaxed">
                         Formación técnica integral en Programación, Análisis de Sistemas y Diseño. Tu puerta de entrada al mundo tecnológico.
                     </p>
 
