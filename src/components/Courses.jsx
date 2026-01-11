@@ -49,7 +49,11 @@ const bgMap = {
 
 export default function Courses() {
     return (
-        <section id="cursos" className="py-24 bg-gray-50">
+        <section id="cursos" className="py-24 relative overflow-hidden bg-white">
+            {/* Subtle Texture/Pattern can be added here if needed */}
+            <div className="absolute inset-0 z-0 opacity-[0.03]"
+                style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #000 1px, transparent 0)', backgroundSize: '32px 32px' }}>
+            </div>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros <span className="text-primary-700">Programas</span></h2>

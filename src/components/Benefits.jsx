@@ -41,7 +41,7 @@ export default function Benefits() {
                 <img
                     src="/img/fondo_ventajas.png"
                     alt="Background"
-                    className="w-full h-full object-cover opacity-90"
+                    className="w-full h-full object-cover object-center sm:object-center opacity-90 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 via-gray-900/80 to-gray-900" />
             </div>

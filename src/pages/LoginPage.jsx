@@ -24,8 +24,18 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen pt-20 pb-12 flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
-            <div className="w-full max-w-md">
+        <div className="min-h-screen pt-20 pb-12 flex items-center justify-center relative overflow-hidden bg-primary-900 px-4">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/img/fondo_prinicipal.png"
+                    alt="Background"
+                    className="w-full h-full object-cover object-top sm:object-center opacity-30 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-900/80 to-primary-900/40" />
+            </div>
+
+            <div className="w-full max-w-md relative z-10">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden">
                     <div className="p-8 sm:p-12">
                         <div className="text-center mb-10">

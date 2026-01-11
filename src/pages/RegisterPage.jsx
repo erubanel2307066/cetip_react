@@ -37,8 +37,18 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen pt-20 pb-12 flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
-            <div className="w-full max-w-md">
+        <div className="min-h-screen pt-20 pb-12 flex items-center justify-center relative overflow-hidden bg-primary-900 px-4">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/img/fondo_prinicipal.png"
+                    alt="Background"
+                    className="w-full h-full object-cover object-top sm:object-center opacity-30 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-900/80 to-primary-900/40" />
+            </div>
+
+            <div className="w-full max-w-md relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

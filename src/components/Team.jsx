@@ -33,7 +33,8 @@ const team = [
 
 export default function Team() {
     return (
-        <section id="equipo" className="py-24 bg-white">
+        <section id="equipo" className="py-24 relative overflow-hidden bg-white">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-50/30 to-transparent" />
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestro <span className="text-primary-700">Equipo</span></h2>
