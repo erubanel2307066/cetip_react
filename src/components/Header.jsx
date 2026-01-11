@@ -1,18 +1,27 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, GraduationCap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from './ui/Button';
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
+
+    const handleSignOut = () => {
+        console.log('Sign out');
+        navigate('/');
+    };
 
     const navLinks = [
         { name: 'Inicio', href: '#inicio' },
@@ -28,7 +37,7 @@ export default function Header() {
                     <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
                         <GraduationCap className="w-6 h-6" />
                     </div>
-                    <span className="text-2xl font-display font-extrabold text-primary-900 group-hover:text-primary-700 transition">
+                    <span className={`text-2xl font-display font-extrabold transition-colors ${scrolled ? 'text-primary-900' : 'text-white'}`}>
                         CETIP<span className="text-accent-yellow">.</span>
                     </span>
                 </Link>
@@ -39,13 +48,20 @@ export default function Header() {
                         <a
                             key={link.name}
                             href={link.href.startsWith('#') ? `/${link.href}` : link.href}
-                            className="text-gray-600 hover:text-primary-700 font-medium transition-colors"
+                            className={`font-semibold transition-all duration-200 ${scrolled
+                                ? 'text-gray-700 hover:text-primary-600'
+                                : 'text-white/90 hover:text-white drop-shadow-sm'
+                                }`}
                         >
                             {link.name}
                         </a>
                     ))}
                     <div className="flex items-center gap-3">
-                        <Button to="/login" variant="ghost" className="py-2 px-5 text-sm">
+                        <Button
+                            to="/login"
+                            variant="ghost"
+                            className={`py-2 px-5 text-sm ${scrolled ? '' : 'text-white hover:bg-white/10 hover:text-white'}`}
+                        >
                             Iniciar Sesión
                         </Button>
                         <Button href="/#contacto" variant="primary" className="py-2 px-5 text-sm">
@@ -57,7 +73,7 @@ export default function Header() {
                 {/* Mobile Toggle */}
                 <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="md:hidden p-2 text-gray-700"
+                    className={`md:hidden p-2 transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}
                 >
                     {mobileMenuOpen ? <X /> : <Menu />}
                 </button>

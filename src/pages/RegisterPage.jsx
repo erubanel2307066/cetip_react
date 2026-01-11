@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Mail, Lock, User, ArrowRight, CreditCard } from 'lucide-react'; // Added CreditCard icon for Matricula representation
+import { Link, useNavigate } from 'react-router-dom';
+import { Mail, Lock, User, ArrowRight } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 export default function RegisterPage() {
@@ -10,6 +10,10 @@ export default function RegisterPage() {
         email: '',
         password: ''
     });
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(false);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,10 +23,17 @@ export default function RegisterPage() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Registration attempt:', formData);
-        // TODO: Add backend integration
+        setLoading(true);
+        setError(null);
+
+        // Lógica de registro eliminada
+        setTimeout(() => {
+            setLoading(false);
+            setSuccess(true);
+            setTimeout(() => navigate('/login'), 2000);
+        }, 1500);
     };
 
     return (
@@ -42,6 +53,16 @@ export default function RegisterPage() {
                             <p className="text-gray-600 dark:text-gray-400">
                                 Únete a la comunidad CETIP
                             </p>
+                            {error && (
+                                <div className="mt-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl border border-red-100">
+                                    {error}
+                                </div>
+                            )}
+                            {success && (
+                                <div className="mt-4 p-3 bg-green-50 text-green-600 text-sm rounded-xl border border-green-100">
+                                    ¡Registro exitoso! Revisa tu correo para confirmar (si está habilitado). Redirigiendo...
+                                </div>
+                            )}
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">

@@ -1,15 +1,26 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, ArrowRight } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Login attempt:', { email, password });
+        setLoading(true);
+        setError(null);
+
+        // Lógica de Supabase eliminada
+        setTimeout(() => {
+            setLoading(false);
+            console.log('Intento de login con:', email);
+            navigate('/');
+        }, 1000);
     };
 
     return (
@@ -24,6 +35,11 @@ export default function LoginPage() {
                             <p className="text-gray-600 dark:text-gray-400">
                                 Ingresa a tu cuenta para continuar
                             </p>
+                            {error && (
+                                <div className="mt-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl border border-red-100">
+                                    {error}
+                                </div>
+                            )}
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -71,9 +87,9 @@ export default function LoginPage() {
                                 </div>
                             </div>
 
-                            <Button type="submit" className="w-full group">
-                                Iniciar Sesión
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            <Button type="submit" className="w-full group" disabled={loading}>
+                                {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
+                                {!loading && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
                             </Button>
                         </form>
 

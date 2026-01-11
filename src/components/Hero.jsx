@@ -5,16 +5,6 @@ import { ArrowRight, Code, Database, Sparkles } from 'lucide-react';
 export default function Hero() {
     return (
         <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-primary-900">
-            {/* Background Effects */}
-            <div className="absolute inset-0 z-0 opacity-20">
-                <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-500 blur-[120px]" />
-                <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-600 blur-[120px]" />
-            </div>
-            {/* Grid Pattern */}
-            <div className="absolute inset-0 z-0 opacity-10"
-                style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}>
-            </div>
-
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
