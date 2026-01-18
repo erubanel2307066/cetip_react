@@ -11,7 +11,7 @@ export default function Footer() {
                             Centro de Estudios Técnicos en Informática del Pacífico. Formando profesionales desde hace más de 20 años.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors">
+                            <a href="https://www.facebook.com/profile.php?id=100057363703861" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors">
                                 <Facebook size={20} />
                             </a>
                         </div>
@@ -31,7 +31,7 @@ export default function Footer() {
                         <h4 className="text-white font-bold mb-4">Contacto</h4>
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-center gap-3">
-                                <Mail size={16} className="text-primary-500" /> escueladecomputacion@gmail.com
+                                <Mail size={16} className="text-primary-500" /> cetiptecnicosinformaticos@gmail.com
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={16} className="text-primary-500" /> 744 371 6384
@@ -46,7 +46,7 @@ export default function Footer() {
                         <h4 className="text-white font-bold mb-4">Validez</h4>
                         <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
                             <p className="text-xs text-gray-400 mb-2">Incorporado a la SEP</p>
-                            <p className="font-bold text-white">RVOE: 2026-C3T1P</p>
+                            <p className="font-bold text-white">RVOE: 12PBT0241Q</p>
                         </div>
                     </div>
                 </div>
