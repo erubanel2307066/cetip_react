@@ -6,13 +6,21 @@ export default function Hero() {
     return (
         <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-primary-900">
             {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src="/img/fondo_prinicipal.png"
+            <div className="absolute inset-0 z-0 overflow-hidden">
+                <motion.img
+                    src="/fondo_hero_new.jpg"
                     alt="Hero Background"
-                    className="w-full h-full object-cover object-top sm:object-center opacity-90 transition-all duration-700"
+                    initial={{ scale: 1 }}
+                    animate={{ scale: 1.1 }}
+                    transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        ease: "linear"
+                    }}
+                    className="w-full h-full object-cover object-top sm:object-center opacity-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-900/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-950/60 via-primary-900/50 to-primary-800/40" />
             </div>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div

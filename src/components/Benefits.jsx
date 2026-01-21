@@ -39,7 +39,7 @@ export default function Benefits() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/img/fondo_ventajas.png"
+                    src="/fondo_ventajas_new.png"
                     alt="Background"
                     className="w-full h-full object-cover object-center sm:object-center opacity-90 transition-all duration-700"
                 />
