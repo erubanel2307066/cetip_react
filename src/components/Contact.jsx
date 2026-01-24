@@ -2,12 +2,23 @@ import { useState } from 'react';
 import Button from './ui/Button';
 import { Phone, Mail, CheckCircle, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { sanitizeInput } from '../lib/security';
 
 export default function Contact() {
     const [status, setStatus] = useState(null); // 'success', 'error', null
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const name = sanitizeInput(formData.get('nombre'));
+        const email = sanitizeInput(formData.get('email'));
+        const interest = sanitizeInput(formData.get('interes'));
+        const message = sanitizeInput(formData.get('mensaje'));
+
+        // Here you would normally send the sanitized data
+        console.log('Sanitized Data:', { name, email, interest, message });
+
         // Simulate form submission
         setStatus('success');
         e.target.reset();
@@ -70,17 +81,17 @@ export default function Contact() {
                         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                             <div>
                                 <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
-                                <input type="text" id="nombre" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-sm md:text-base" placeholder="Juan Pérez" />
+                                <input type="text" id="nombre" name="nombre" maxLength="100" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-sm md:text-base" placeholder="Juan Pérez" />
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                                <input type="email" id="email" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-sm md:text-base" placeholder="juan@ejemplo.com" />
+                                <input type="email" id="email" name="email" maxLength="100" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-sm md:text-base" placeholder="juan@ejemplo.com" />
                             </div>
 
                             <div>
                                 <label htmlFor="interes" className="block text-sm font-medium text-gray-700 mb-1">Área de Interés</label>
-                                <select id="interes" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition bg-white text-sm md:text-base">
+                                <select id="interes" name="interes" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition bg-white text-sm md:text-base">
                                     <option>Carrera: Técnico Programador Analista</option>
                                     <option>Cursos de Ofimática</option>
                                     <option>Cursos de Programación</option>
@@ -91,7 +102,7 @@ export default function Contact() {
 
                             <div>
                                 <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-1">Mensaje (Opcional)</label>
-                                <textarea id="mensaje" rows="3" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-sm md:text-base" placeholder="¿Tienen clases los sábados?"></textarea>
+                                <textarea id="mensaje" name="mensaje" maxLength="500" rows="3" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-sm md:text-base" placeholder="¿Tienen clases los sábados?"></textarea>
                             </div>
 
                             <Button type="submit" className="w-full py-3.5 md:py-4 text-base md:text-lg bg-primary-700 hover:bg-primary-800 mt-2">
