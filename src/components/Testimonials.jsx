@@ -23,6 +23,20 @@ const testimonials = [
         role: "Técnico Programador Analista de Sistemas",
         image: "/testimonials/yumairi.jpg",
         text: "Convertirme en Analista de Sistemas cambió mi perspectiva profesional. Aquí obtuve la formación práctica y la visión estratégica para liderar proyectos tecnológicos de alto impacto. Mi futuro está en el desarrollo."
+    },
+    {
+        id: 4,
+        name: "Carlos David Lorenzo",
+        role: "Técnico Programador Analista de Sistemas",
+        image: "/testimonials/carlos.jpg",
+        text: "Al principio tenía mis dudas, pero una vez que tomé la decisión, mi perspectiva cambió completamente. La calidad de la enseñanza y el ambiente me convencieron de que fue el camino correcto."
+    },
+    {
+        id: 5,
+        name: "Itzel Arai Carmona ",
+        role: "Técnico Programador Analista de Sistemas",
+        image: "/testimonials/leydi.jpg",
+        text: "Descubrí que la programación es el lenguaje del futuro. En CETIP, no solo aprendí a escribir código, sino a crear soluciones que transforman realidades. Hoy me siento capaz de innovar en cualquier industria."
     }
 ];
 
