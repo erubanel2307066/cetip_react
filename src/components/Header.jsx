@@ -57,14 +57,7 @@ export default function Header() {
                         </a>
                     ))}
                     <div className="flex items-center gap-3">
-                        <Button
-                            to="/login"
-                            variant="ghost"
-                            className={`py-2 px-5 text-sm ${scrolled ? '' : 'text-white hover:bg-white/10 hover:text-white'}`}
-                        >
-                            Iniciar Sesión
-                        </Button>
-                        <Button href="/#contacto" variant="primary" className="py-2 px-5 text-sm">
+                        <Button href="#contacto" variant="primary" className="py-2 px-5 text-sm">
                             Inscripción
                         </Button>
                     </div>
@@ -99,10 +92,7 @@ export default function Header() {
                                     {link.name}
                                 </a>
                             ))}
-                            <Button onClick={() => setMobileMenuOpen(false)} to="/login" variant="ghost" className="w-full justify-start">
-                                Iniciar Sesión
-                            </Button>
-                            <Button onClick={() => setMobileMenuOpen(false)} href="/#contacto" className="w-full">
+                            <Button onClick={() => setMobileMenuOpen(false)} href="#contacto" className="w-full">
                                 Inscripción
                             </Button>
                         </nav>
