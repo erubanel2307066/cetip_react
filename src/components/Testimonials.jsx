@@ -33,9 +33,9 @@ const testimonials = [
     },
     {
         id: 5,
-        name: "Itzel Arai Carmona ",
+        name: "Itzel Arai Carmona",
         role: "Técnico Programador Analista de Sistemas",
-        image: "/testimonials/leydi.jpg",
+        image: "/testimonials/itzel.png",
         text: "Descubrí que la programación es el lenguaje del futuro. En CETIP, no solo aprendí a escribir código, sino a crear soluciones que transforman realidades. Hoy me siento capaz de innovar en cualquier industria."
     }
 ];
